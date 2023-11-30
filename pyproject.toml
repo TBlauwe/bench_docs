@@ -1,0 +1,22 @@
+[project]
+name = "bench_charts"
+version = "0.0.1"
+authors = [
+  { name="Tristan de Blauwe", email="tdeblauwe@pm.me" },
+]
+description = "Generates charts and tables from your benchmark results."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/tblauwe/bench_charts"
+Issues = "https://github.com/tblauwe/bench_charts/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
