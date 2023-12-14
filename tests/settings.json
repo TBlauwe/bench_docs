@@ -1,0 +1,21 @@
+{
+  "benchmarks_directory": "data/",
+  "benchmarks_format": "GoogleBenchmark",
+  "git_directory": "../",
+  "parameters": {
+    "build_type": "@1",
+    "toolchain": "@2"
+  },
+  "charts": {
+    "title.html": {
+      "query" : "some query",
+      "include_table"  : true,
+      "include_csv"  : true
+    },
+    "another_title.html": {
+      "query" : "some query",
+      "include_table"  : true,
+      "include_csv"  : true
+    }
+  }
+}

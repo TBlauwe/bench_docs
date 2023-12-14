@@ -1,0 +1,174 @@
+{
+  "context": {
+    "date": "2023-12-14 11:23:06",
+    "executable": "./benchmark",
+    "num_cpus": 4,
+    "mhz_per_cpu": 2200,
+    "cpu_scaling_enabled": false,
+    "caches": [
+      {
+        "type": "Data",
+        "level": 1,
+        "size": 32768,
+        "num_sharing": 2
+      },
+      {
+        "type": "Instruction",
+        "level": 1,
+        "size": 32768,
+        "num_sharing": 2
+      },
+      {
+        "type": "Unified",
+        "level": 2,
+        "size": 262144,
+        "num_sharing": 2
+      },
+      {
+        "type": "Unified",
+        "level": 3,
+        "size": 4194304,
+        "num_sharing": 4
+      }
+    ],
+    "load_avg": [
+      0.18,
+      0.12,
+      0.09
+    ]
+  },
+  "benchmarks": [
+    {
+      "name": "BM_empty",
+      "run_name": "BM_empty",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 78156268,
+      "real_time": 10.9500000000000002e-09,
+      "cpu_time": 10.9500000000000002e-09,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_empty/threads:4",
+      "run_name": "BM_empty/threads:4",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 4,
+      "iterations": 76800000,
+      "real_time": 4.2800000000000001e-09,
+      "cpu_time": 11.1200000000000001e-09,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_spin_empty",
+      "run_name": "BM_spin_empty",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.3000000000000001e-11,
+      "cpu_time": 3.3000000000000001e-11,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_spin_empty/threads:4",
+      "run_name": "BM_spin_empty/threads:4",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 4,
+      "iterations": 1000000000,
+      "real_time": 11.0000000000000002e-12,
+      "cpu_time": 5.6000000000000001e-11,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_memcpy/8",
+      "run_name": "BM_memcpy/8",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 19126245,
+      "real_time": 5.6600000000000001e-08,
+      "cpu_time": 5.6600000000000001e-08,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_memcpy/64",
+      "run_name": "BM_memcpy/64",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 4246341,
+      "real_time": 3.65e-07,
+      "cpu_time": 3.65e-07,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_memcpy/512",
+      "run_name": "BM_memcpy/512",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 772805,
+      "real_time": 11.0600000000000005e-07,
+      "cpu_time": 11.0600000000000005e-07,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_memcpy/1024",
+      "run_name": "BM_memcpy/1024",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 396178,
+      "real_time": 3.766e-06,
+      "cpu_time": 3.766e-06,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_memcpy/8192",
+      "run_name": "BM_memcpy/8192",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 50035,
+      "real_time": 3.3968000000000001e-05,
+      "cpu_time": 3.3968000000000001e-05,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_memcpy/8k",
+      "run_name": "BM_memcpy/8k",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 49892,
+      "real_time": 3.4024000000000001e-05,
+      "cpu_time": 3.4024000000000001e-05,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_memcpy/8k/threads:4",
+      "run_name": "BM_memcpy/8k/threads:4",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 4,
+      "iterations": 47778,
+      "real_time": 5.6780000000000002e-06,
+      "cpu_time": 3.471200000,
+      "time_unit": "ns"
+      }
+  ]
+}
