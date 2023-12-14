@@ -18,8 +18,10 @@ def run(filepath: str):
     files = retrieve_all_files_from(settings.benchmarks_directory)
     repo = git.Repository(settings.git_directory)
 
-    df = pd.DataFrame(columns=['Name', 'Datetime', 'Mean', 'Median', 'TimeUnit', 'Stddev', 'Git commit/tag'] + list(settings.parameters.keys()))
-    df["TimeUnit"] = ""
+    additionnal_columns = list(settings.parameters.keys())
+    columns = ['Name', 'Datetime', 'Mean', 'Median', 'TimeUnit', 'Stddev', 'Git commit/tag'] + additionnal_columns
+    icolumns = ['Name', 'Datetime', 'Git commit/tag'] + additionnal_columns
+    df = pd.DataFrame(columns=columns)
 
     # Parse
     for file in files:
@@ -33,6 +35,20 @@ def run(filepath: str):
             GoogleBenchmarkParser.parse(df, settings, config, file)
         else:
             print(f"Error: {settings.benchmarks_format} is not a supported format.")
+
+    # Reorganize dataframe
+    df = df.sort_values(by=["Name", "Datetime"])
+    index = pd.MultiIndex.from_frame(df[icolumns])
+    df.index = index
+    df = df.drop(columns=icolumns)
+
+    # Generate charts
+    for title, chart in settings.charts.items():
+        _df = df.query(chart.query)
+        for name, group in _df.groupby(["Name"] + additionnal_columns):
+            print(name)
+            print(group)
+
     print("Done")
 
 

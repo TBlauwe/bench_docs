@@ -10,15 +10,6 @@ class Chart:
         self.include_table = include_table
         self.include_csv = include_csv
 
-class Context:
-
-    def __init__(self, repo: git.Repository, params: dict):
-        self.repo = git.Repository
-        self.params = params
-
-    def update_context_from_file(self, file: File):
-        pass
-
 
 class Settings:
     def __init__(self, filename):

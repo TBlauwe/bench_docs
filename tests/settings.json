@@ -8,12 +8,12 @@
   },
   "charts": {
     "title.html": {
-      "query" : "some query",
+      "query" : "Name.str.contains('spin_empty')",
       "include_table"  : true,
       "include_csv"  : true
     },
     "another_title.html": {
-      "query" : "some query",
+      "query" : "Name.str.contains('memcpy')",
       "include_table"  : true,
       "include_csv"  : true
     }
