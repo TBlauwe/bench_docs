@@ -1,16 +1,22 @@
 [project]
-name = "bench_charts"
+name = "bench_docs"
 version = "0.0.1"
 authors = [
   { name="Tristan de Blauwe", email="tdeblauwe@pm.me" },
 ]
-description = "Generates charts and tables from your benchmark results."
+description = "Generates charts and tables from your benchmark results to incorporate them in your documentation."
 readme = "README.md"
 requires-python = ">=3.9"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
+    "Topic :: Documentation",
+    "Topic :: System :: Benchmark"
+]
+dependencies = [
+    "pandas",
+    "bokeh"
 ]
 
 [project.urls]
@@ -18,5 +24,5 @@ Homepage = "https://github.com/tblauwe/bench_charts"
 Issues = "https://github.com/tblauwe/bench_charts/issues"
 
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
