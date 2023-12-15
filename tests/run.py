@@ -1,7 +1,5 @@
-import argparse
-
-from bench_docs.script import run
+from bench_docs.script import App
 
 if __name__ == '__main__':
-    run("settings.json")
+    App("settings.json").run()
 
