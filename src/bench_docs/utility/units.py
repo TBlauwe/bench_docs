@@ -9,6 +9,16 @@ factors = {
     "d": 86400  # days
 }
 
+reversed_factors = {
+    1e-9: "ns",
+    1e-6: "us",
+    1e-3: "ms",
+    1: "s",
+    60: "m",
+    3600: "h",
+    86400: "d"
+}
+
 
 # define a function to convert time units
 def convert_time(value, from_unit: str, to_unit: str):
