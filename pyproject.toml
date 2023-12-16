@@ -16,7 +16,8 @@ classifiers = [
 ]
 dependencies = [
     "pandas",
-    "bokeh"
+    "bokeh",
+    "beautifulsoup4"
 ]
 
 [project.urls]
