@@ -28,11 +28,11 @@ class GoogleBenchmarkParser(AbstractParser):
             if b['run_type'] == 'aggregate':
                 if b['aggregate_name'] == 'mean':
                     df.loc[index, Columns.MEAN.name] = b.get('real_time')
-                    df.loc[index, Columns.TIME_UNIT.name] = factors.get(b.get('time_unit'))
+                    df.loc[index, Columns.TIME_UNIT.name] = b.get('time_unit')
                 elif b['aggregate_name'] == 'median':
                     df.loc[index, Columns.MEDIAN.name] = b.get('real_time')
                 elif b['aggregate_name'] == 'stddev':
                     df.loc[index, Columns.STDDEV.name] = b.get('real_time')
             else:
                 df.loc[index, Columns.MEAN.name] = b.get('real_time')
-                df.loc[index, Columns.TIME_UNIT.name] = factors.get(b.get('time_unit'))
+                df.loc[index, Columns.TIME_UNIT.name] = b.get('time_unit')

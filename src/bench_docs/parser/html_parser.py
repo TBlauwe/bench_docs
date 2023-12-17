@@ -18,7 +18,7 @@ class HtmlParser:
         assert_directory_exists(output_location)
 
         self.html_file = html_file
-        with open(html_file, 'r') as f:
+        with open(html_file, 'r', encoding='utf-8') as f:
             self.html = f.read()
             self.soup = BeautifulSoup(self.html, 'html.parser')
 
@@ -46,5 +46,5 @@ class HtmlParser:
         embed_div.append(div_tag)
 
     def save(self):
-        with open(os.path.join(self.output_location, self.html_file), 'w') as f:
+        with open(os.path.join(self.output_location, self.html_file), 'w', encoding='utf-8') as f:
             f.write(str(self.soup.prettify()))

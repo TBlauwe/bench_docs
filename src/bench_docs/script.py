@@ -6,7 +6,7 @@ from bokeh.models import Legend
 from bokeh.palettes import Category10
 
 from bench_docs.dataframe import Columns
-from bench_docs.media.summary_chart import SummaryChart
+from bench_docs.widgets.summary_chart import SummaryChart
 from bench_docs.utility import git
 from bench_docs.utility.asserts import assert_file_exists
 from bench_docs.parser.google_benchmark import GoogleBenchmarkParser
@@ -39,9 +39,7 @@ class App:
     def run(self):
         self.build_dataframe()
         self.reorganize_dataframe()
-        print("Breakpoint")
         SummaryChart(self.df, self.additional_columns)
-        print("Breakpoint")
 
     def build_dataframe(self):
         for file in self.files:
